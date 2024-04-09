@@ -34,9 +34,9 @@ function calcOdds(e) {
             console.log("avg: ", data.avg)
             let zScore = (idToTgtDraft.value - data.avg) / data.stDev
             // console.log(zScore.toFixed(2))
-            let pbOdds = 1- (ztable(zScore.toFixed(2))).toFixed(2)
+            let pbOdds = 1- (ztable(zScore))
             console.log(pbOdds.toFixed(2))
-            setOdds((pbOdds.toFixed(2))*100)
+            setOdds((pbOdds*100).toFixed(2))
 
         }
 
@@ -52,7 +52,7 @@ function calcOdds(e) {
             <Form>
                 <Row>
                 <Col md="3">
-                    <Form.Control id={indexFirst} placeholder="Draft#">
+                    <Form.Control className="input-pick-num" id={indexFirst} placeholder="Pick#">
                     </Form.Control>
                 </Col>
                 <Col md="3">
@@ -67,10 +67,10 @@ function calcOdds(e) {
                     </Form.Select>
                 </Col>
                 <Col md="3">
-                    <p>{odds}%</p>
+                    <p className="percent-val">{odds}%</p>
                 </Col>
                 <Col md="3">
-                    <Button type="submit" onClick={calcOdds}>
+                    <Button className="calc-btn" type="submit" onClick={calcOdds}>
                         Calc.
                     </Button>
                 </Col>

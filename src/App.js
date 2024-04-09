@@ -116,22 +116,28 @@ let orderList = []
 
   return (
     <div className="App">
-      <Container>
+      <Container fluid>
         <Row>
           {" "}
-          <header>NFL Pro Bowl and Draft Position Statistics</header>
+          <header>
+            <h1>
+          NFL Pro Bowl and Draft Position Statistics
+
+          </h1>
+            </header>
         </Row>
         <Row>
-          <Col md="4">
+          <Col md="1"></Col>
+          <Col md="5">
             <Row>
               <Col md="3">
-                <p>Draft#</p>
+                <p className="toggle-header">Pick#</p>
               </Col>
               <Col md="3">
-                <p>Position</p>
+                <p className="toggle-header">Position</p>
               </Col>
               <Col md="3">
-                <p>Odds</p>
+                <p className="toggle-header">Odds</p>
               </Col>
             </Row>
             {picks.map((pick, index) => {
@@ -145,17 +151,19 @@ let orderList = []
             })}
             
           </Col>
-          <Col md="8">
+          <Col md="1"></Col>
+          <Col md="4">
             <Row>
               {positionObj.map((pos) => {
                 return (
-                  <Col md="3">
+                  <Col md="4">
                     <PositionSummary info={pos} />
                   </Col>
                 );
               })}
             </Row>
           </Col>
+          <Col md="1"></Col>
         </Row>
       </Container>
     </div>

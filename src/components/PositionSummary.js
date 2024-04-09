@@ -4,15 +4,28 @@ import { Row, Col } from "react-bootstrap";
 
 function PositionSummary(props) {
   return (
-    <div>
-      <Row>{props.info.position}</Row>
+    <div className="summary-wrapper">
+      <Row><p className="summary-position">
+        {props.info.position}
+        </p></Row>
       <Row>
-        <Col md="6">Avg Draft Position</Col>
-        <Col md="6">{props.info.avg}</Col>
+        <h2>Pro Bowl Draft Pos.</h2>
       </Row>
       <Row>
-        <Col md="6">StDev Draft Position</Col>
-        <Col md="6">{props.info.stDev}</Col>
+        <Col md="6">
+          <p className="summary-label">Avg</p>
+        </Col>
+        <Col md="6">
+          <p className="summary-value">{props.info.avg}</p>
+        </Col>
+      </Row>
+      <Row>
+        <Col md="6">
+          <p className="summary-label">StDev</p>
+        </Col>
+        <Col md="6">
+          <p className="summary-value">{props.info.stDev}</p>
+        </Col>
       </Row>
     </div>
   );
