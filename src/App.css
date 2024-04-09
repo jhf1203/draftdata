@@ -21,6 +21,11 @@ header{
 
 /* App.js */
 
+.last-p{
+  margin-bottom: 45px;
+  margin-top: 18px
+}
+
 .toggle-header{
   font-size: 18px;
   font-weight: 500;

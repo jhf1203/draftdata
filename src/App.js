@@ -128,6 +128,25 @@ let orderList = []
         </Row>
         <Row>
           <Col md="1"></Col>
+          <Col md="10">
+            <p>Welcome!</p>
+            <p>This is a simple application, using data from profootball-reference.com, to help us understand a given position's probability of making a Pro-Bowl based off of when they were drafted.</p>
+<p>The purpose of this page is to help us understand the level of impact we can expect by various players, in various draft picks.  Specifically, it lets us measure the average Pro-Bowl potential of a given position vs. another one at a specific point in the draft. </p>
+<p>Here are a couple of things to keep in mind when consuming this data:</p>
+<li>The sample size used here was for the last five Pro Bowls</li>
+<li>Undrafted Free Agents are not included, with the exception of any QB, RB, or WRs</li>
+<li>Fullbacks & Special Teams selections (besides Kickers and Punters) are not included, as teams typically do not draft for those positions specifically.</li>
+<li>The MLB designation used for some years was rolled into the "ILB" category.  Similarly, the NT position was rolled into "DT"</li>
+<p className="last-p"> Thank you for taking a look around...happy exploring!</p>
+
+
+
+          </Col>
+          <Col md="1"></Col>
+        </Row>
+        
+        <Row>
+          <Col md="1"></Col>
           <Col md="5">
             <Row>
               <Col md="3">
